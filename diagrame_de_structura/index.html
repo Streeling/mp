@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Diagrame de structură &mdash; Managementul proiectelor 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Managementul proiectelor 0.0.1 documentation" href="../index.html" />
+    <link rel="next" title="Diagrame de interacțiuni" href="../diagrame_de_interactiuni/index.html" />
+    <link rel="prev" title="Welcome to Managementul proiectelor’s documentation!" href="../index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="diagrame-de-structura">
+<h1>Diagrame de structură<a class="headerlink" href="#diagrame-de-structura" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="diagrame-de-clasa">
+<h2>Diagrame de clasă<a class="headerlink" href="#diagrame-de-clasa" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="lista-de-atribute">
+<h3>Lista de atribute<a class="headerlink" href="#lista-de-atribute" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-uml"><div class="highlight"><pre>nume : tip atribut [= valoare implicită]
+</pre></div>
+</div>
+</div>
+<div class="section" id="lista-de-operatii">
+<h3>Lista de operații<a class="headerlink" href="#lista-de-operatii" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-uml"><div class="highlight"><pre>nume(lista de parametri) : tipul valorii returnate
+</pre></div>
+</div>
+</div>
+<div class="section" id="vizibilitate">
+<h3>Vizibilitate<a class="headerlink" href="#vizibilitate" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="mostenire">
+<h3>Moștenire<a class="headerlink" href="#mostenire" title="Permalink to this headline">¶</a></h3>
+<p>Linie solidă din clasa copil (subclasa) la clasa părinte (superclasa) cu vîrf de săgeată neumplut.</p>
+</div>
+<div class="section" id="asociere-bidirectionala">
+<h3>Asociere [bidirecţională]<a class="headerlink" href="#asociere-bidirectionala" title="Permalink to this headline">¶</a></h3>
+<p>Linie solidă fără vîrf cu indicatori de cardinalitate la amble capete.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Indic</th>
+<th class="head">Semnif</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>0..1</td>
+<td>Zero sau unu</td>
+</tr>
+<tr class="row-odd"><td>1</td>
+<td>Unu</td>
+</tr>
+<tr class="row-even"><td>0..*</td>
+<td>Zero sau mai mulți</td>
+</tr>
+<tr class="row-odd"><td>*</td>
+<td>Zero sau mai mulți</td>
+</tr>
+<tr class="row-even"><td>1..*</td>
+<td>Unu sau mai mulți</td>
+</tr>
+<tr class="row-odd"><td>n</td>
+<td>Doar n</td>
+</tr>
+<tr class="row-even"><td>0..n</td>
+<td>De la zero la n</td>
+</tr>
+<tr class="row-odd"><td>n..m</td>
+<td>De la n la m</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="asociere-unidirectionala">
+<h3>Asociere [unidirecţională]<a class="headerlink" href="#asociere-unidirectionala" title="Permalink to this headline">¶</a></h3>
+<p>Linie solidă din clasa care deține relația (owner) la clasa care nu &#8216;&#8217;știe&#8217; de această relație cu vîrf de săgeată umplut (sau simplu). La capătul unde este vîrful se pune un indicator de cardinalitate.</p>
+</div>
+<div class="section" id="agregare">
+<h3>Agregare<a class="headerlink" href="#agregare" title="Permalink to this headline">¶</a></h3>
+<p>Linie solidă din clasa parte (copil) la clasa întreg (părinte) cu vîrf în formă de diamant neumplut.</p>
+</div>
+<div class="section" id="compozitie">
+<h3>Compoziție<a class="headerlink" href="#compozitie" title="Permalink to this headline">¶</a></h3>
+<p>La fel ca și relația de agregare doar că clasa copil nu poate exista decât în cazul existenţei clasei părinte. Se utilizează diamantul umplut.</p>
+</div>
+<div class="section" id="dependenta-realizare">
+<h3>Dependență (realizare)<a class="headerlink" href="#dependenta-realizare" title="Permalink to this headline">¶</a></h3>
+<p>Linie întreruptă din clasa A la clasa B (astfel încît A are un atribut de tipul B) cu vîrf de săgeată neumplut (sau simplu).</p>
+<p>Exemplu <a class="reference external" href="http://www.techit.ro/tutorial_uml_5.php">Tutorial UML (partea a V-a). Class Diagram</a>
+Exemplu <a class="reference external" href="http://www.uml-diagrams.org/class-diagrams-overview.html">UML Class and Object Diagrams Overview</a>
+Exemple avansate: <a class="reference external" href="http://www.uml-diagrams.org/class-diagrams-examples.html">UML Class Diagrams Examples</a></p>
+<p>Exerciții <a class="reference external" href="https://lagunita.stanford.edu/c4x/DB/UML/asset/opt-uml.html">UML Exercises</a>
+Exerciții <a href="#id1"><span class="problematic" id="id2">`Exercises on basic UML: structures&lt;http://www.cs.unibo.it/~cianca/wwwpages/ids/esempi/uml-s.pdf&gt;`_</span></a></p>
+</div>
+</div>
+<div class="section" id="diagrama-de-componente">
+<h2>Diagramă de componente<a class="headerlink" href="#diagrama-de-componente" title="Permalink to this headline">¶</a></h2>
+<p>Componenetele sistemului și legăturile dintre acesta.</p>
+<p>Exemple <a class="reference external" href="http://www.uml-diagrams.org/component-diagrams-examples.html">UML Component Diagrams Examples</a></p>
+</div>
+<div class="section" id="diagrame-structura-composita">
+<h2>Diagrame structură composită<a class="headerlink" href="#diagrame-structura-composita" title="Permalink to this headline">¶</a></h2>
+<p>Structura internă a unei clase.</p>
+<p>Exemple <a class="reference external" href="http://www.uml-diagrams.org/composite-structure-examples.html">UML Composite Structure Diagram Examples</a></p>
+</div>
+<div class="section" id="diagrama-de-deployment">
+<h2>Diagramă de Deployment<a class="headerlink" href="#diagrama-de-deployment" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="diagrame-de-obiecte">
+<h2>Diagrame de obiecte<a class="headerlink" href="#diagrame-de-obiecte" title="Permalink to this headline">¶</a></h2>
+<p>Schemă <a class="reference external" href="http://www.uml-diagrams.org/class-diagrams-overview.html#object-diagram">Object Diagram</a></p>
+<p>Exemple <a class="reference external" href="http://www.uml-diagrams.org/online-shopping-user-login-uml-object-diagram-example.html">Online Shopping Login Controller</a></p>
+</div>
+<div class="section" id="diagrame-de-pachete">
+<h2>Diagrame de pachete<a class="headerlink" href="#diagrame-de-pachete" title="Permalink to this headline">¶</a></h2>
+<p>Atunci cînd se modelează un sistem cu multe elemente componente poate apărea necisitatea de a grupa elementele (dupa careva criterii) în pachete.</p>
+<p>Exemple: <a class="reference external" href="http://www.uml-diagrams.org/package-diagrams-examples.html">UML Package Diagram Examples</a></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Diagrame de structură</a><ul>
+<li><a class="reference internal" href="#diagrame-de-clasa">Diagrame de clasă</a><ul>
+<li><a class="reference internal" href="#lista-de-atribute">Lista de atribute</a></li>
+<li><a class="reference internal" href="#lista-de-operatii">Lista de operații</a></li>
+<li><a class="reference internal" href="#vizibilitate">Vizibilitate</a></li>
+<li><a class="reference internal" href="#mostenire">Moștenire</a></li>
+<li><a class="reference internal" href="#asociere-bidirectionala">Asociere [bidirecţională]</a></li>
+<li><a class="reference internal" href="#asociere-unidirectionala">Asociere [unidirecţională]</a></li>
+<li><a class="reference internal" href="#agregare">Agregare</a></li>
+<li><a class="reference internal" href="#compozitie">Compoziție</a></li>
+<li><a class="reference internal" href="#dependenta-realizare">Dependență (realizare)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#diagrama-de-componente">Diagramă de componente</a></li>
+<li><a class="reference internal" href="#diagrame-structura-composita">Diagrame structură composită</a></li>
+<li><a class="reference internal" href="#diagrama-de-deployment">Diagramă de Deployment</a></li>
+<li><a class="reference internal" href="#diagrame-de-obiecte">Diagrame de obiecte</a></li>
+<li><a class="reference internal" href="#diagrame-de-pachete">Diagrame de pachete</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../index.html" title="previous chapter">Welcome to Managementul proiectelor&#8217;s documentation!</a></li>
+      <li>Next: <a href="../diagrame_de_interactiuni/index.html" title="next chapter">Diagrame de interacțiuni</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/diagrame_de_structura/index.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, Radu Dumbrăveanu.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.7</a>
+      
+      |
+      <a href="../_sources/diagrame_de_structura/index.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
